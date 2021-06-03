@@ -3,6 +3,8 @@ from discord.ext import commands
 from discord import Color
 from dotenv import dotenv_values
 
+import Cogs
+
 # Getting Environment Variables
 config = dotenv_values(".env")
 PREFIX = config["PREFIX"]
@@ -27,15 +29,9 @@ async def on_message(message):
         args = message.content.split()
         print(args)
 
-# Execute !bot_help command
+# Other commands
 blue = Color.blue()
-@client.command()
-async def bot_help(ctx):
-    embedVar = discord.Embed(title="Help", description="How to use the bot", color=blue)
-    embedVar.set_author(name='help')
-    embedVar.add_field(name="What do i do?", value="Checks for offensive or abusive \
-    language in text, videos, images and links.", inline=False)
-    await ctx.send(embed=embedVar)
+client.add_cog(Cogs.Helper(client, blue))
 
 # Run the bot
 client.run(TOKEN)
