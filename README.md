@@ -35,5 +35,5 @@ python3 app.py
 ```
 
 ## Commands
-1.  whoareu
+1.  whoareu<br>
     Gives a short description of what exactly the bot does.
