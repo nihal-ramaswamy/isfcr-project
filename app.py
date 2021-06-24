@@ -30,8 +30,7 @@ async def on_message(message):
         print(args)
 
 # Other commands
-blue = Color.blue()
-client.add_cog(Cogs.Helper(client, blue))
+client.add_cog(Cogs.Helper(client, Color.blue()))
 
 # Run the bot
 client.run(TOKEN)
