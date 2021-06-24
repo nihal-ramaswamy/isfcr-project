@@ -133,3 +133,5 @@ dmypy.json
 bin/
 include/
 *sublime*
+*.pkl
+*.pickle
