@@ -15,5 +15,5 @@ class Helper(commands.Cog):
         """Prints what the bot does"""
         embedVar = discord.Embed(title="Help", description="How to use the bot", color=self.color)
         embedVar.set_author(name='help')
-        embedVar.add_field(name="What do i do?", value="Checks for offensive and NSFW content.", inline=False)
+        embedVar.add_field(name="What do i do?", value="I check for offensive and NSFW content.", inline=False)
         await ctx.send(embed=embedVar)
